@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html lang="pt-br"> 
+	<head> 
+		<title>título</title>
+		<meta charset="utf-8">
+		<script>
+		function exemploProgress() {
+			var aux = document.getElementById('p').value;
+			aux++;
+			document.getElementById('p').value = aux;
+			var aux = document.getElementById('m').value;
+			aux++;
+			document.getElementById('m').value = aux;
+			window.setTimeout(exemploProgress, 500);
+		}
+  		</script>
+	</head> 
+	<body onload="exemploProgress()"> 
+		<form name="cadastro" method="post" action="#" enctype="multipart/form-data">
+			<p>
+				<label>
+					Área de Texto:
+					<textarea>Que a força esteja com você...</textarea>
+				</label>
+			</p>
+			<p>
+				<label>
+					Barra de Progresso:
+					<progress id="p" max="100" value="30"></progress>
+				</label>
+			</p>
+			<p>
+				<label>
+					Meter:
+					<meter id="m" min="40" max="100" value="30">
+				</label>
+			</p>
+			<p>
+				<input type="submit" value = "Cadastrar">
+			</p>
+
+		</form>
+	</body> 
+</html>
